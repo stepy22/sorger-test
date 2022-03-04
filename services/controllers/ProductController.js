@@ -1,18 +1,28 @@
+/**
+ * import Models
+ * @type {{}}
+ */
 const Product = require('../models/Product');
 
-exports.get = (req, res, next) => {
-    Product.findAll({attributes: ['ProductName', 'UnitPrice','IsVegan']})
-        .then(products => {
-            res.json(products)
-        })
-        .catch(err => {
-            console.log(err);
-        });
+
+/**
+ * Get
+ * @param req
+ * @param res
+ * @param next
+ */
+exports.get = async (req, res, next) => {
+    const products = await Product.findAll({attributes: ['ProductName', 'UnitPrice', 'IsVegan']})
+    res.json(products)
 };
 
-exports.find = (req, res, next) => {
-    Product.findByPk(req.params.id).then(product => {
-        res.json(product)
-        }
-    )
+/**
+ * Get
+ * @param req
+ * @param res
+ * @param next
+ */
+exports.find = async (req, res, next) => {
+    const product = await Product.findByPk(req.params.id, {attributes: ['ProductName', 'UnitPrice', 'IsVegan']})
+    res.json(product)
 }
