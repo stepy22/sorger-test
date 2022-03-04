@@ -1,0 +1,23 @@
+{
+  "name": "sorger-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stepy22/sorger-test.git"
+  },
+  "author": "Vukasin Petrovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stepy22/sorger-test/issues"
+  },
+  "homepage": "https://github.com/stepy22/sorger-test#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "sequelize": "^6.17.0"
+  }
+}
