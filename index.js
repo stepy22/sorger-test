@@ -4,3 +4,6 @@ express.use(productApi);
 
 const orderApi=require('./routes/orderApi');
 express.use(orderApi);
+
+const customerApi=require('./routes/customerApi');
+express.use(customerApi);
