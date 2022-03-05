@@ -28,6 +28,14 @@ exports.find = async (req, res, next) => {
     res.json(product)
 }
 
+
+/**
+ * delete product if product isnt in curent unfullifiled order
+ * @param req
+ * @param res
+ * @param next
+ * @returns {Promise<void>}
+ */
 exports.delete = async (req, res, next) => {
     const product = await Product.findByPk(req.params.id);
     const orderItems =await OrderItem.findAll({
